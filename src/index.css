@@ -1,0 +1,425 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+figure{
+  text-align: center;
+}
+
+li{
+  list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+.purple{
+  color: #6030B1;
+}
+
+.home{
+  padding: 0 50px;
+}
+
+/* NAVIGATION */
+
+.navigation{
+  margin-top: 24px;
+}
+
+.home__nav{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home__logo{
+  height: 40px;
+  width: 150px;
+}
+
+.nav__links{
+  display: flex;
+  align-items: center;
+}
+
+.nav__link{
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.link__trans{
+  transition: all 300ms ease;
+}
+
+.link__trans:hover{
+  text-decoration: underline;
+}
+
+.nav__black{
+  margin: 0 48px;
+  color: #0a1f44;
+  cursor: not-allowed;
+}
+
+.nav__button{
+  color: white;
+  background-color: #6030B1;
+  padding: 12px 40px;
+  border-radius: 50px;
+  font-size: 13px;
+  transition: all 300ms ease;
+  cursor: not-allowed;
+}
+
+.nav__button:hover{
+  background-color: #5d3eff;
+}
+
+/* HOME */
+
+.home__details{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1{
+  font-size: 40px;
+  margin: 30px 0;
+  text-align: center;
+}
+
+h2{
+  font-size: 24px;
+  text-align: center;
+  color: #0a1f44;
+  margin-bottom: 40px;
+  animation: fade-up 650ms 600ms backwards;
+}
+
+.input__wrapper{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  animation: fade-up 650ms 800ms backwards;
+}
+
+.home__input{
+  width: 100%;
+  max-width: 450px;
+  border-radius: 20px;
+  border: 1px solid #0a1f44;
+  height: 52px;
+  font-size: 16px;
+  padding-left: 25px;
+  color: #6030B1;
+  outline: none;
+}
+
+.home__button{
+  width: 112px;
+  height: 52px;
+  margin-left: 20px;
+  font-size: 30px;
+  border-radius: 20px;
+  border: 1px solid #6030B1;
+  background-color: #6030B1;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  color: white;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.home__button:hover{
+  background-color: #ff328f;
+  border: 1px solid #ff328f;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.searchImage{
+  height: 40vh;
+}
+
+.h1__animation{
+  animation: fade-up 650ms 400ms backwards;
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* SEARCH */
+
+.search{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.search__input-wrapper{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.search__input{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #0a1f44;
+  width: 100%;
+  max-width: 450px;
+  height: 70px;
+  border-radius: 50px;
+  padding:10px 20px;
+}
+
+.sInput{
+  border: none;
+  outline: none;
+  color: #6030B1;
+  padding: 10px;
+  font-size: 24px;
+}
+
+.search__icon{
+  font-size: 24px;
+  color: #6030B1;
+  cursor: pointer;
+}
+
+.search__icon:hover{
+  color: #ff328f;
+}
+
+.search__results{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.movie__card{
+  margin-bottom: 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: all 300ms ease;
+}
+
+.movie__card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  transform: scale(1.07);
+}
+
+.movie__image{
+  width: 355px;
+  height: 355px;
+  border-radius: 10px;
+}
+
+.movie__header{
+  max-width: 355px;
+  text-align: left;
+  font-size: 20px;
+  font-weight: 700;
+  padding-left: 8px;
+  margin: 8px 0;
+  color: #6030B1;
+}
+
+.movie__para{
+  text-align: left;
+  font-size: 20px;
+  padding-left: 8px;
+  color: #0a1f44;
+}
+
+figcaption{
+  margin-top: 16px;
+  font-size: 24px;
+  color: #0a1f44;
+}
+
+.movie__loading--spinner{
+  display: none !important;
+  animation: rotate 600ms infinite linear;
+}
+
+.spinner--add{
+  display: flex;
+  justify-content: center !important;
+  font-size: 60px;
+  color: #6030b1;
+}
+
+.spinner--add .movie__loading--spinner{
+  display: block !important;
+}
+
+.spinner--add .movie__card{
+  display: none !important;
+}
+
+.spinner--add .searchImage__wrapper{
+  display: none !important;
+}
+
+@keyframes rotate{
+  0% {
+      transform: rotate(0);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+/* DETAILS */
+
+.details{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.details__movie{
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  margin: 30px 0;
+  cursor: pointer;
+}
+
+.arrow{
+  margin-right: 8px;
+  color: #0a1f44;
+}
+
+.details__title{
+  color: #0a1f44;
+}
+
+.details__title:hover{
+  text-decoration: underline;
+}
+
+.movie__details{
+  display: flex;
+}
+
+.movie__info{
+  padding-left: 64px;
+  text-align: left;
+}
+
+.movie__title{
+  font-size: 32px;
+  color: #6030b1;
+}
+
+.movie__genre{
+  margin: 4px 0;
+  color: #70757a;
+  font-size: 20px;
+}
+
+.movie__sub-title{
+  margin: 8px 0;
+  font-size: 24px;
+  color: #0a1f44;
+}
+
+.movie__description--para{
+  color: #0a1f44;
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.movie__description--details{
+  color: #0a1f44;
+  font-weight: 500;
+  font-size: 20px;
+  margin-top: 8px;
+}
+
+/* SMALL PHONES, TABLETS, LARGE SMARTPHONES */
+@media (max-width: 768px) {
+  .navigation{
+    padding: 0 24px;
+  }
+
+  h1{
+    margin-top: 50px;
+  }
+
+  .searchImage__wrapper{
+    padding: 0 24px;
+  }
+
+  .details__movie{
+    padding-left: 24px;
+  }
+
+  .movie__image{
+    width: 300px;
+    height: 300px;
+  }
+
+  .movie__header{
+    width: 300px;
+  }
+
+  .movie__details{
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .movie__info{
+    padding: 16px 24px 0 64px;
+  }
+}
+
+/* SMALL PHONES, LARGE SMARTPHONES */
+@media (max-width: 550px) {
+  .link__remove{
+    display: none;
+  }
+
+  .home__logo{
+    height: 32px;
+    width: 100px;
+  }
+
+  h1{
+    font-size: 22px;
+  }
+
+  h2{
+    font-size: 20px;
+  }
+
+  .home__input{
+    padding-left: 8px;
+    font-size: 14px;
+  }
+
+  .searchImage{
+    height: 32vh;
+  }
+}
+
